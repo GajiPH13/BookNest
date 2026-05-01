@@ -8,7 +8,8 @@ import { FaHeart } from 'react-icons/fa';
 const BookCard = ({book}) => {
     // console.log(photo);
     return (
-        <Card className='rounded-xl border'>
+        <div>
+            <Card className='rounded-xl border '>
             <div className='relative w-full aspect-square '>
             <Image 
             src={book?.image_url} 
@@ -37,8 +38,13 @@ const BookCard = ({book}) => {
             <p>{book?.downloads}</p>
         </div>
         </div>
-        <Link href={`/all-books/${book?.id}`}><Button  variant="outline" className={'w-full'}>View</Button></Link>
+        <Link href={`/all-books/${book?.id}`}>
+        <Button  variant="outline" className={'w-full  bg-[#cddcfd]'}  >
+            View
+            </Button>
+            </Link>
         </Card>
+        </div>
     );
 };
 
