@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "description": "This novel explores the illusion of the American Dream through the life of Jay Gatsby. It highlights themes of wealth, love, and social status in the 1920s. The story is narrated by Nick Carraway, who observes Gatsby’s tragic pursuit of Daisy. It ultimately reveals the emptiness behind glamorous lifestyles.",
+    "category": "Story",
+    "available_quantity": 5,
+    "image_url": "https://covers.openlibrary.org/b/id/7222246-L.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "description": "This book teaches developers how to write clean, readable, and maintainable code. It emphasizes best practices and coding standards that improve software quality. Real-world examples are used to demonstrate bad code and how to fix it. It is widely considered essential reading for professional programmers.",
+    "category": "Tech",
+    "available_quantity": 10,
+    "image_url": "https://covers.openlibrary.org/b/id/9611996-L.jpg"
+  },
+  {
+    "id": 3,
+    "title": "A Brief History of Time",
+    "author": "Stephen Hawking",
+    "description": "This book explains complex scientific concepts in a way that is accessible to general readers. It covers topics such as black holes, the Big Bang, and the nature of time. Hawking explores fundamental questions about the universe and existence. The book has inspired millions to take an interest in cosmology.",
+    "category": "Science",
+    "available_quantity": 9,
+    "image_url": "https://covers.openlibrary.org/b/id/240726-L.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Sapiens",
+    "author": "Yuval Noah Harari",
+    "description": "This book traces the history of humankind from ancient times to the modern era. It explores how biology and culture have shaped societies. Harari discusses major revolutions that transformed human life. The book challenges readers to think about the future of humanity.",
+    "category": "History",
+    "available_quantity": 7,
+    "image_url": "https://covers.openlibrary.org/b/id/8370226-L.jpg"
+  },
+  {
+    "id": 5,
+    "title": "The Lean Startup",
+    "author": "Eric Ries",
+    "description": "This book introduces a new approach to building startups efficiently. It focuses on validated learning and rapid experimentation. Entrepreneurs are encouraged to test ideas quickly and adapt based on feedback. The methodology helps reduce waste and improve product success.",
+    "category": "Business",
+    "available_quantity": 6,
+    "image_url": "https://covers.openlibrary.org/b/id/6979861-L.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Harry Potter and the Sorcerer's Stone",
+    "author": "J.K. Rowling",
+    "description": "This fantasy novel follows a young boy who discovers he is a wizard. Harry attends Hogwarts School of Witchcraft and Wizardry. Along the way, he makes friends and faces magical challenges. The story introduces a richly imagined magical world loved by readers worldwide.",
+    "category": "Fantasy",
+    "available_quantity": 12,
+    "image_url": "https://covers.openlibrary.org/b/id/7984916-L.jpg"
+  },
+  {
+    "id": 7,
+    "title": "1984",
+    "author": "George Orwell",
+    "description": "This dystopian novel presents a world controlled by a totalitarian regime. It explores themes of surveillance, propaganda, and individual freedom. The protagonist struggles against oppressive authority. The story remains highly relevant in discussions of privacy and power.",
+    "category": "Story",
+    "available_quantity": 8,
+    "image_url": "https://covers.openlibrary.org/b/id/7222241-L.jpg"
+  },
+  {
+    "id": 8,
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt & David Thomas",
+    "description": "This book offers practical advice for improving software development skills. It covers topics such as debugging, testing, and teamwork. The authors share tips to help developers think critically and solve problems. It is a must-read for anyone in the tech industry.",
+    "category": "Tech",
+    "available_quantity": 5,
+    "image_url": "https://covers.openlibrary.org/b/id/8099256-L.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Cosmos",
+    "author": "Carl Sagan",
+    "description": "This book takes readers on a journey through the universe and scientific discovery. It explains complex astronomical concepts in an engaging way. Sagan connects science with philosophy and human curiosity. The book inspires wonder about our place in the cosmos.",
+    "category": "Science",
+    "available_quantity": 9,
+    "image_url": "https://covers.openlibrary.org/b/id/240728-L.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Guns, Germs, and Steel",
+    "author": "Jared Diamond",
+    "description": "This book examines the factors that shaped the modern world. It focuses on geography, environment, and human development. Diamond explains why some civilizations advanced faster than others. The book offers a unique perspective on global history.",
+    "category": "History",
+    "available_quantity": 4,
+    "image_url": "https://covers.openlibrary.org/b/id/8231990-L.jpg"
+  },
+  {
+    "id": 11,
+    "title": "Rich Dad Poor Dad",
+    "author": "Robert Kiyosaki",
+    "description": "This book contrasts two different approaches to money and investing. It teaches financial literacy and wealth-building strategies. Kiyosaki emphasizes the importance of assets and passive income. The book has influenced millions of readers worldwide.",
+    "category": "Business",
+    "available_quantity": 11,
+    "image_url": "https://covers.openlibrary.org/b/id/7864866-L.jpg"
+  },
+  {
+    "id": 12,
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "description": "This fantasy adventure follows Bilbo Baggins on an unexpected journey. He joins a group of dwarves to reclaim their homeland. Along the way, he encounters dragons, treasure, and magical creatures. The story is a classic introduction to Middle-earth.",
+    "category": "Fantasy",
+    "available_quantity": 7,
+    "image_url": "https://covers.openlibrary.org/b/id/6979860-L.jpg"
+  }
+]

@@ -1,0 +1,9 @@
+[
+  { "id": 1, "name": "All Books", "slug": "all books" },
+  { "id": 2, "name": "Story", "slug": "story" },
+  { "id": 3, "name": "Tech", "slug": "tech" },
+  { "id": 4, "name": "Science", "slug": "science" },
+  { "id": 5, "name": "History", "slug": "history" },
+  { "id": 6, "name": "Business", "slug": "business" },
+  { "id": 7, "name": "Fantasy", "slug": "fantasy" }
+]
