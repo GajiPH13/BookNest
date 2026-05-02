@@ -13,7 +13,7 @@ const Navbar = () => {
   // console.log(userData);
   return (
     
-     <div className="border-b px-2 relative">
+     <div className="border-b border-zinc-200 px-2 relative shadow-sm">
       <nav className="flex justify-between items-center py-3 max-w-7xl mx-auto w-full">
 
         {/* Logo */}

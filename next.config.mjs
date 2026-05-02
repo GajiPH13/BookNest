@@ -15,6 +15,12 @@ const nextConfig = {
       },
       {
         hostname: 'www.freepik.com',
+      },
+      {
+        hostname: 'images.unsplash.com',
+      },
+      {
+        hostname: 'i.pravatar.cc',
       }
     ]
   },
