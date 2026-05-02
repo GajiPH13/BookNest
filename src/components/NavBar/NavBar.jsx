@@ -118,7 +118,7 @@ const Navbar = () => {
                 <p>{user.name}</p>
               </div>
               <button
-                className="bg-red-500 text-white px-2 py-1 rounded mt-2"
+                className="bg-[#88ABFD] text-white px-2 py-1 rounded mt-2"
                 onClick={() => {
                   authClient.signOut();
                   setIsOpen(false);
