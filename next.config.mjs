@@ -8,6 +8,13 @@ const nextConfig = {
         
         hostname: 'covers.openlibrary.org',
         
+      },
+      {
+        hostname: 'lh3.googleusercontent.com',
+       
+      },
+      {
+        hostname: 'www.freepik.com',
       }
     ]
   },

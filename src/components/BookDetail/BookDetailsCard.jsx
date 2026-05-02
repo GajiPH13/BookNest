@@ -1,20 +1,34 @@
 "use client";
+import { Chip } from "@heroui/react";
 import Image from "next/image";
 import { toast, ToastContainer } from "react-toastify";
 
 const BookDetailsCard = ({ book }) => {
-    const notify = () => toast.success("Book Added to Cart");
+  const notify = () => toast.success("Book Added to Cart");
   return (
     <div className="card lg:card-side bg-base-100 shadow-sm">
-      
-        <Image src={book?.image_url} alt="Album" width={400} height={500} />
-      
+      {/* <Image src={book?.image_url} alt="Album" width={400} height={500} /> */}
+      <div className="relative">
+        <Image
+        src={book?.image_url || "/placeholder.jpg"}
+        alt={book?.title || "Book cover"}
+        width={400}
+        height={500}
+        className="rounded-lg object-cover shadow-md"
+        priority={false}
+        sizes="(max-width: 768px) 100vw, 400px"
+      />
+      <Chip className='absolute top-2 right-2'>{book?.category}</Chip>
+      </div>
+
       <div className="card-body">
         <h2 className="card-title">{book?.title}</h2>
         <p>{book?.author}</p>
         <p>{book?.description}</p>
         <div className="card-actions justify-end">
-          <button onClick={notify} className="btn bg-[#d0ddfd]">Brow Now</button>
+          <button onClick={notify} className="btn bg-[#d0ddfd]">
+            Brow Now
+          </button>
         </div>
       </div>
       <ToastContainer />
