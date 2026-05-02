@@ -68,7 +68,7 @@ export default function BookSlider() {
   };
 
   return (
-    <div className="w-full bg-[#EAF0FD] max-w-7xl mx-auto mt-10 p-4 rounded-lg">
+    <div className="w-full bg-[#F5F8FE] max-w-7xl mx-auto mt-20 px-4 py-10 rounded-lg">
       <div
         className="relative overflow-hidden rounded-2xl shadow-xl"
         style={{ backgroundColor: "#EAF0FD" }}

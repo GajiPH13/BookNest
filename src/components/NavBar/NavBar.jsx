@@ -124,7 +124,7 @@ const Navbar = () => {
                   setIsOpen(false);
                 }}
               >
-                SignOut
+                Sign out
               </button>
             </>
           )}

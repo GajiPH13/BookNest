@@ -7,7 +7,7 @@ const FeaturedBooks = async () => {
   const topBooks = data.slice(0, 4);
   // console.log(topPhotos);
   return (
-    <div className="max-w-7xl mx-auto h-auto p-4 mt-4 rounded-lg bg-[#f8f8f8] p-4">
+    <div className="max-w-7xl mx-auto h-auto p-4 mt-20 rounded-lg bg-[#f8f8f8] p-4">
       <h1 className="mt-5 text-xl sm:text-2xl font-semibold">Featured Books</h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">

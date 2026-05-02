@@ -36,7 +36,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <div className="w-full max-w-7xl mx-auto p-3 bg-[#F8F8F8] rounded-xl my-4">
+    <div className="w-full max-w-7xl mx-auto p-3 bg-[#F8F8F8] rounded-xl mt-20 py-10">
       <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
         What Our Readers Say
       </h2>
