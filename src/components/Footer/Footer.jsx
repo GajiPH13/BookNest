@@ -135,13 +135,13 @@ const Footer = () => {
 
           <div className="flex items-center gap-6">
             <Link
-              href="/privacy"
+              href="/"
               className="hover:text-black dark:hover:text-white transition"
             >
               Privacy
             </Link>
             <Link
-              href="/terms"
+              href="/"
               className="hover:text-black dark:hover:text-white transition"
             >
               Terms
