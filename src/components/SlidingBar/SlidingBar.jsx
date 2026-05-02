@@ -81,7 +81,7 @@ export default function BookSlider() {
             animate="center"
             exit="exit"
             custom={direction}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
             className="flex flex-col md:flex-row items-center p-6 gap-6"
             style={{ backgroundColor: "#dbe5fd" }}
           >

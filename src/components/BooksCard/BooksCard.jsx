@@ -39,7 +39,7 @@ const BookCard = ({book}) => {
         </div>
         </div>
         <Link href={`/all-books/${book?.id}`}>
-        <Button  variant="outline" className={'w-full  bg-[#cddcfd]'}  >
+        <Button  variant="outline" className={'w-full border border-[#cddcfd]'}  >
             View
             </Button>
             </Link>
