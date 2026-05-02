@@ -65,7 +65,7 @@ const AllPhotoPage = async ({ searchParams }) => {
     <div className="md:col-span-1">
       <Link href="/all-books">
         <h1 className="text-lg sm:text-xl font-semibold">
-          All Photos
+          All Books
         </h1>
       </Link>
     </div>

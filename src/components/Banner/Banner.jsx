@@ -25,12 +25,12 @@ const Banner = () => {
           </p>
 
           <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#386fec] font-bold">
-            Your One-Stop Destination
+             OnLine Bookstore
           </p>
 
           <p className="text-sm sm:text-base md:text-lg mb-6 max-w-xl text-[#4a5b7d]">
             Explore thousands of books, eBooks, and resources
-            
+            <br />
             anytime anywhere.
           </p>
 

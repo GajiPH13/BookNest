@@ -37,66 +37,85 @@ export default function SignInPage() {
    };
 
   return (
-    <Card className="border-2 border-blue-300 mx-auto w-125 py-10 mt-5 shadow-2xl">
-      <h1 className="text-center text-2xl font-bold">Sign In</h1>
+    
+    <Card className="border border-blue-300 mx-auto w-full max-w-md px-4 sm:px-6 py-8 sm:py-10 mt-5 shadow-2xl">
+  <h1 className="text-center text-2xl font-bold">Sign In</h1>
 
-      <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
-        <TextField
-          isRequired
-          name="email"
-          type="email"
-          validate={(value) => {
-            if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)) {
-              return "Please enter a valid email address";
-            }
+  <Form
+    className="w-full flex flex-col gap-4 mt-4"
+    onSubmit={onSubmit}
+  >
+    <TextField
+      isRequired
+      name="email"
+      type="email"
+      validate={(value) => {
+        if (
+          !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)
+        ) {
+          return "Please enter a valid email address";
+        }
+        return null;
+      }}
+    >
+      <Label>Email</Label>
+      <Input placeholder="john@example.com" />
+      <FieldError />
+    </TextField>
 
-            return null;
-          }}
-        >
-          <Label>Email</Label>
-          <Input placeholder="john@example.com" />
-          <FieldError />
-        </TextField>
+    <TextField
+      isRequired
+      minLength={8}
+      name="password"
+      type="password"
+      validate={(value) => {
+        if (value.length < 8) {
+          return "Password must be at least 8 characters";
+        }
+        if (!/[A-Z]/.test(value)) {
+          return "Password must contain at least one uppercase letter";
+        }
+        if (!/[0-9]/.test(value)) {
+          return "Password must contain at least one number";
+        }
+        return null;
+      }}
+    >
+      <Label>Password</Label>
+      <Input placeholder="Enter your password" />
+      <Description>
+        Must be at least 8 characters with 1 uppercase and 1 number
+      </Description>
+      <FieldError />
+    </TextField>
 
-        <TextField
-          isRequired
-          minLength={8}
-          name="password"
-          type="password"
-          validate={(value) => {
-            if (value.length < 8) {
-              return "Password must be at least 8 characters";
-            }
-            if (!/[A-Z]/.test(value)) {
-              return "Password must contain at least one uppercase letter";
-            }
-            if (!/[0-9]/.test(value)) {
-              return "Password must contain at least one number";
-            }
+    {/* Buttons */}
+    <div className="flex flex-col sm:flex-row gap-2">
+      <Button type="submit" className="w-full sm:w-auto">
+        <Check />
+        Sign In
+      </Button>
 
-            return null;
-          }}
-        >
-          <Label>Password</Label>
-          <Input placeholder="Enter your password" />
-          <Description>
-            Must be at least 8 characters with 1 uppercase and 1 number
-          </Description>
-          <FieldError />
-        </TextField>
+      <Button
+        type="reset"
+        variant="secondary"
+        className="w-full sm:w-auto"
+      >
+        Reset
+      </Button>
+    </div>
+  </Form>
 
-        <div className="flex gap-2">
-          <Button type="submit">
-            <Check />
-            Sign In
-          </Button>
-          <Button type="reset" variant="secondary">
-            Reset
-          </Button>
-        </div>
-      </Form>
-      <p className="text-center text-3xl">or</p>
-      <Button onClick={onGoogleSignIn} variant="outline" className={"w-full"}><GrGoogle/>Sign in with Google</Button>
-    </Card>
+  <p className="text-center text-lg sm:text-xl my-4">or</p>
+
+  <Button
+    onClick={onGoogleSignIn}
+    variant="outline"
+    className="w-full border border-blue-300 flex items-center justify-center gap-2"
+  >
+    <GrGoogle />
+    Sign in with Google
+  </Button>
+</Card>
   );
 }

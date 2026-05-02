@@ -21,7 +21,7 @@ const CategorySearch = () => {
     <form onSubmit={handleSearch} style={{ position: "relative" }}>
       <input
         type="text"
-        placeholder="Search for Available Photos"
+        placeholder="Search for Available Books"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         style={{ paddingLeft: "30px" }}
