@@ -64,9 +64,11 @@ const AllPhotoPage = async ({ searchParams }) => {
     
     <div className="md:col-span-1">
       <Link href="/all-books">
-        <h1 className="text-lg sm:text-xl font-semibold">
+        <button className=" w-full py-4 rounded-lg border border-zinc-200 text-lg sm:text-xl font-semibold">
+          
           All Books
-        </h1>
+        
+        </button>
       </Link>
     </div>
 
