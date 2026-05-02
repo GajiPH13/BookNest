@@ -20,44 +20,85 @@ const AllPhotoPage = async ({ searchParams }) => {
       )
     : books;
   return (
-    <div>
-      <div className="grid grid-cols-4 mt-5 items-center">
-        <div className="col-span-1">
-          <Link href={"/all-books"}>
-            <h1>All Photos</h1>
-          </Link>
-        </div>
-        <div className="col-span-3 ">
-          <div style={{ position: "relative" }} >
-            <GiArchiveResearch
-              style={{
-                position: "absolute",
-                left: "10px",
-                top: "50%",
-                transform: "translateY(-50%)",
-              }}
-            />
-            {/* <input
-              type="text"
-              placeholder="Search for Available Photos"
-              style={{ paddingLeft: "30px" }}
-              className="w-full py-4 rounded-lg border border-zinc-200"
-            /> */}
-            <CategorySearch></CategorySearch>
-          </div>
-        </div>
-      </div>
-      <div className="grid grid-cols-4 gap-4">
-        <div className="col-span-1">
-          <Category></Category>
-        </div>
-        <div className="grid grid-cols-3 col-span-3">
-          {filteredBooks.map((book) => (
-            <BookCard key={book.id} book={book}></BookCard>
-          ))}
-        </div>
+    // <div>
+    //   <div className="grid grid-cols-4 mt-5 items-center">
+    //     <div className="col-span-1">
+    //       <Link href={"/all-books"}>
+    //         <h1>All Photos</h1>
+    //       </Link>
+    //     </div>
+    //     <div className="col-span-3 ">
+    //       <div style={{ position: "relative" }} >
+    //         <GiArchiveResearch
+    //           style={{
+    //             position: "absolute",
+    //             left: "10px",
+    //             top: "50%",
+    //             transform: "translateY(-50%)",
+    //           }}
+    //         />
+    //         {/* <input
+    //           type="text"
+    //           placeholder="Search for Available Photos"
+    //           style={{ paddingLeft: "30px" }}
+    //           className="w-full py-4 rounded-lg border border-zinc-200"
+    //         /> */}
+    //         <CategorySearch></CategorySearch>
+    //       </div>
+    //     </div>
+    //   </div>
+    //   <div className="grid grid-cols-4 gap-4">
+    //     <div className="col-span-1">
+    //       <Category></Category>
+    //     </div>
+    //     <div className="grid grid-cols-3 col-span-3">
+    //       {filteredBooks.map((book) => (
+    //         <BookCard key={book.id} book={book}></BookCard>
+    //       ))}
+    //     </div>
+    //   </div>
+    // </div>
+    <div className="max-w-7xl mx-auto px-4">
+  {/* Top Section */}
+  <div className="grid grid-cols-1 md:grid-cols-4 mt-5 items-center gap-4">
+    
+    <div className="md:col-span-1">
+      <Link href="/all-books">
+        <h1 className="text-lg sm:text-xl font-semibold">
+          All Photos
+        </h1>
+      </Link>
+    </div>
+
+    <div className="md:col-span-3">
+      <div className="relative">
+        <GiArchiveResearch
+          className="absolute left-3 top-1/2 -translate-y-1/2"
+        />
+        
+        {/* Search */}
+        <CategorySearch />
       </div>
     </div>
+  </div>
+
+  {/* Main Content */}
+  <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-4">
+    
+    {/* Sidebar */}
+    <div className="md:col-span-1">
+      <Category />
+    </div>
+
+    {/* Books Grid */}
+    <div className="md:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {filteredBooks.map((book) => (
+        <BookCard key={book.id} book={book} />
+      ))}
+    </div>
+
+  </div>
+</div>
   );
 };
 

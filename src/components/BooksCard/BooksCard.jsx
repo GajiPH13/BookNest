@@ -9,7 +9,7 @@ const BookCard = ({book}) => {
     // console.log(photo);
     return (
         <div>
-            <Card className='rounded-xl border '>
+            <Card className='rounded-xl border border-[#cddcfd] shadow transform transition duration-500 hover:scale-105 '>
             <div className='relative w-full aspect-square '>
             <Image 
             src={book?.image_url} 
