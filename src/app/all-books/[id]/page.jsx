@@ -1,5 +1,6 @@
-import BookCard from "@/components/BooksCard/BooksCard";
 
+
+import BookDetailsCard from "@/components/BookDetail/BookDetailsCard";
 import { Card } from "@heroui/react";
 import React from "react";
 
@@ -14,11 +15,13 @@ const BookDetailsPage = async ({ params }) => {
   const book = books.find((book) => book.id === parseInt(id));
 //   console.log(photo);
   return (
-    <div className="w-5xl">
+    <div className="max-w-7xl ">
       <h1>Book Details</h1>
-      <Card>
-        <BookCard book={book}></BookCard>
-      </Card>
+      
+        <div className="flex items-center">
+          <BookDetailsCard book={book}></BookDetailsCard>
+        </div>
+      
     </div>
   );
 };
