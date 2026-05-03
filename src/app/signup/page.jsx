@@ -11,7 +11,9 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
 
 
@@ -34,9 +36,12 @@ export default function SignUpPage() {
     // console.log(data);
     // console.log(error);
 
-    if (!error) {
-      router.push("/");
-      alert("Sign up successful!");
+   if (!error) {
+      toast.success("Sign up successful!");
+      router.push("/signin");
+    }
+    if (error) {
+      alert("Something went wrong!");
     }
   };
 
@@ -122,6 +127,7 @@ export default function SignUpPage() {
       </Button>
     </div>
   </Form>
+  <p>Already have an account?<span className="text-blue-500"> <Link href="/signin">Sign In</Link></span></p>
 </Card>
   );
 }

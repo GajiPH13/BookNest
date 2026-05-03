@@ -45,9 +45,9 @@ export default function Testimonials() {
         {testimonials.map((user, index) => (
           <motion.div
             key={user.id}
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: index % 2 === 0 ? -40 : 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.2 }}
+            transition={{ delay: index * 0.8 }}
             viewport={{ once: true }}
             className="rounded-2xl p-5 shadow-lg flex flex-col items-center text-center"
             style={{ backgroundColor: "#EAF0FD" }}

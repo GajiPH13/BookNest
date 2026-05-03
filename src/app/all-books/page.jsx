@@ -6,6 +6,11 @@ import Link from "next/link";
 import React from "react";
 import { GiArchiveResearch } from "react-icons/gi";
 
+export const metadata = {
+  title: "All Books",
+  description: "Online Bookstore",
+};
+
 const AllPhotoPage = async ({ searchParams }) => {
   const { category } = await searchParams;
   console.log(category);

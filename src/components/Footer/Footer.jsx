@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { TiSocialFacebook, TiSocialTwitter, TiSocialYoutube } from "react-icons/ti";
 
 const Footer = () => {
   return (
@@ -30,7 +31,7 @@ const Footer = () => {
                 className="dark:brightness-200"
               />
               <h2 className="text-xl font-semibold tracking-tight text-black dark:text-white">
-                pixgen
+                BookNest
               </h2>
             </div>
 
@@ -52,7 +53,7 @@ const Footer = () => {
                   href="/generate"
                   className="hover:text-black dark:hover:text-white transition"
                 >
-                  Lend
+                  Borrow
                 </Link>
               </li>
               <li>
@@ -69,7 +70,7 @@ const Footer = () => {
           {/* Company */}
           <div className="flex flex-col items-center md:items-start">
             <h3 className="text-sm font-semibold text-black dark:text-white mb-4">
-              Company
+              Contact Us
             </h3>
             <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
               <li>
@@ -102,18 +103,23 @@ const Footer = () => {
           {/* CTA */}
           <div className="space-y-4 flex flex-col items-center md:items-start">
             <h3 className="text-sm font-semibold text-black dark:text-white">
-              Start reading
+              Social Media
             </h3>
 
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              Read our latest Books.
+              Follow us on
             </p>
-
+            {/* Social Icons */}
+            <div className="flex gap-4">
+              <p><TiSocialFacebook /></p>
+              <p><TiSocialTwitter /></p>
+              <p><TiSocialYoutube /></p>
+            </div>
             <Link
               href="/signup"
               className="inline-flex items-center justify-center px-5 py-2.5 rounded-full 
           bg-black text-blue-500 dark:bg-white dark:text-black 
-          text-sm font-medium transition-all duration-200 
+          text-sm font-medium transition-all duration-200 shadow-lg
           hover:scale-[1.02] hover:shadow-lg hover:shadow-black/10 dark:hover:shadow-white/10"
             >
               Get Started
@@ -126,7 +132,7 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="mt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 dark:text-gray-400 text-center md:text-left">
-          <p>© {new Date().getFullYear()} pixgen. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} BookNest. All rights reserved.</p>
 
           <div className="flex items-center gap-6">
             <Link

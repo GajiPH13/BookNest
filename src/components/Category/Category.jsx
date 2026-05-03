@@ -1,3 +1,4 @@
+import { div } from "framer-motion/client";
 import CategoryClient from "../CategoryClient/CategoryClient";
 
 const Category = async () => {
@@ -5,6 +6,7 @@ const Category = async () => {
   const categories = await res.json();
 
   return <CategoryClient categories={categories} />;
+  
 };
 
 export default Category;

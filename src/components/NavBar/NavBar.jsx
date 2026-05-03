@@ -13,7 +13,7 @@ const Navbar = () => {
   // console.log(userData);
   return (
     
-     <div className="border-b border-zinc-200 px-2 relative shadow-sm">
+     <div className="border-b border-zinc-200 px-2  shadow-sm sticky top-0 overflow-hidden bg-white z-50">
       <nav className="flex justify-between items-center py-3 max-w-7xl mx-auto w-full">
 
         {/* Logo */}
@@ -118,13 +118,13 @@ const Navbar = () => {
                 <p>{user.name}</p>
               </div>
               <button
-                className="bg-[#88ABFD] text-white px-2 py-1 rounded mt-2"
+                className="bg-[#88ABFD] cursor-pointer text-white px-2 py-1 rounded mt-2"
                 onClick={() => {
                   authClient.signOut();
                   setIsOpen(false);
                 }}
               >
-                Sign out
+                Logout
               </button>
             </>
           )}

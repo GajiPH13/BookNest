@@ -23,11 +23,12 @@ const BookDetailsCard = ({ book }) => {
 
       <div className="card-body">
         <h2 className="card-title">{book?.title}</h2>
-        <p>{book?.author}</p>
+        <p className="font-semibold">{book?.author}</p>
         <p>{book?.description}</p>
+        <p>{book?.available_quantity} Copies Available</p>
         <div className="card-actions justify-end">
           <button onClick={notify} className="btn bg-[#d0ddfd]">
-            Brow Now
+            Borrow this Book
           </button>
         </div>
       </div>
