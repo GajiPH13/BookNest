@@ -50,7 +50,7 @@ export default function SignUpPage() {
 
   return (
     
-    <Card className="border border-blue-300 mx-auto w-full max-w-md px-4 sm:px-6 py-8 sm:py-10 mt-5 shadow-2xl">
+    <Card className="border border-blue-300 mx-auto w-full max-w-md px-4 sm:px-6 py-8 sm:py-10 mt-15 shadow-2xl">
   <h1 className="text-center text-2xl font-bold">Sign Up</h1>
 
   <Form

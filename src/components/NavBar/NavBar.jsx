@@ -10,8 +10,16 @@ const Navbar = () => {
   const user = userData.data?.user;
   const [isOpen, setIsOpen] = useState(false);
   // console.log(userData);
+  // const signOutMsg = async() => {
+  //  await authClient.signOut();
+  //   router.push("/signin");
+  //   setIsOpen(false);
+  //   if (user) {
+  //     toast.success("Sign out successful!");
+  //   }
+  // }
   return (
-    <div className="border-b border-zinc-200 px-2  shadow-sm sticky top-0 overflow-hidden bg-white z-50">
+    <div className="border-b border-zinc-200 px-2  shadow-xl sticky top-0 overflow-hidden bg-white z-50">
       <nav className="flex justify-between items-center py-3 max-w-7xl mx-auto w-full">
         {/* Logo */}
         <Link href="/">
@@ -60,8 +68,13 @@ const Navbar = () => {
               </Avatar>
               <p>{user.name}</p>
               <button
-                className="bg-[#88ABFD] text-white px-2 py-1 rounded text-sm"
-                onClick={() => authClient.signOut()}
+                className="bg-[#88ABFD] text-white px-2 py-1 rounded text-sm cursor-pointer"
+               onClick={async() => {
+                  await authClient.signOut({
+                    callbackUrl: "/signin",
+                  });
+                  setIsOpen(false);
+                }}
               >
                 SignOut
               </button>
@@ -135,13 +148,9 @@ const Navbar = () => {
               </div>
               <button
                 className="bg-[#88ABFD] cursor-pointer text-white px-2 py-1 rounded mt-2"
-                onClick={() => {
-                  authClient.signOut({
-                    fetchOptions: {
-                      onSuccess: () => {
-                        router.push("/login"); // redirect to login page
-                      },
-                    },
+                onClick={async() => {
+                  await authClient.signOut({
+                    callbackUrl: "/signin",
                   });
                   setIsOpen(false);
                 }}

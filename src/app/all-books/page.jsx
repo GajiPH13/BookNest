@@ -67,7 +67,7 @@ const AllPhotoPage = async ({ searchParams }) => {
   {/* Top Section */}
   <div className="grid grid-cols-1 md:grid-cols-4 mt-5 items-center gap-4">
     
-    <div className="md:col-span-1">
+    <div className="md:col-span-1 shadow-lg bg-white">
       <Link href="/all-books">
         <button className=" w-full py-4 rounded-lg border border-zinc-200 text-lg sm:text-xl font-semibold">
           
@@ -77,7 +77,7 @@ const AllPhotoPage = async ({ searchParams }) => {
       </Link>
     </div>
 
-    <div className="md:col-span-3">
+    <div className="md:col-span-3 shadow-lg">
       <div className="relative">
         <GiArchiveResearch
           className="absolute left-3 top-1/2 -translate-y-1/2"
