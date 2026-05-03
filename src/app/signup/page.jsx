@@ -14,6 +14,7 @@ import {
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
+import { ToastContainer } from "react-toastify/unstyled";
 
 
 
@@ -31,6 +32,7 @@ export default function SignUpPage() {
     email: email,
     password: password,
     image: image,
+    callbackURL: "/signin",
    
 });
     // console.log(data);
@@ -128,6 +130,7 @@ export default function SignUpPage() {
     </div>
   </Form>
   <p>Already have an account?<span className="text-blue-500"> <Link href="/signin">Sign In</Link></span></p>
+<ToastContainer />
 </Card>
   );
 }

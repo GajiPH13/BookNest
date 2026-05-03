@@ -4,18 +4,15 @@ import { Avatar, Button } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-
-
+import router from "next/router";
 const Navbar = () => {
   const userData = authClient.useSession();
   const user = userData.data?.user;
   const [isOpen, setIsOpen] = useState(false);
   // console.log(userData);
   return (
-    
-     <div className="border-b border-zinc-200 px-2  shadow-sm sticky top-0 overflow-hidden bg-white z-50">
+    <div className="border-b border-zinc-200 px-2  shadow-sm sticky top-0 overflow-hidden bg-white z-50">
       <nav className="flex justify-between items-center py-3 max-w-7xl mx-auto w-full">
-
         {/* Logo */}
         <Link href="/">
           <div className="flex gap-2 items-center">
@@ -26,25 +23,34 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center gap-5 text-sm">
-          <li><Link href="/">Home</Link></li>
-          <li><Link href="/all-books">All Books</Link></li>
-          <li><Link href="/profile">Profile</Link></li>
+          <li>
+            <Link href="/">Home</Link>
+          </li>
+          <li>
+            <Link href="/all-books">All Books</Link>
+          </li>
+          <li>
+            <Link href="/profile">Profile</Link>
+          </li>
         </ul>
 
         {/* Right Side */}
         <div className="flex items-center gap-4">
-
           {!user && (
             <ul className="hidden md:flex items-center gap-4 text-sm">
-              <li><Link href="/signup">SignUp</Link></li>
-              <li><Link href="/signin">SignIn</Link></li>
+              <li>
+                <Link href="/signup">SignUp</Link>
+              </li>
+              <li>
+                <Link href="/signin">SignIn</Link>
+              </li>
             </ul>
           )}
 
           {user && (
             <div className="hidden md:flex items-center gap-2">
               <Avatar>
-                 <Avatar.Image
+                <Avatar.Image
                   alt={user.name}
                   src={user.image}
                   // for google login to show the avatar
@@ -92,14 +98,24 @@ const Navbar = () => {
         </div>
 
         <div className="flex flex-col gap-4 p-4 text-sm">
-          <Link href="/" onClick={() => setIsOpen(false)}>Home</Link>
-          <Link href="/all-books" onClick={() => setIsOpen(false)}>All Photos</Link>
-          <Link href="/profile" onClick={() => setIsOpen(false)}>Profile</Link>
+          <Link href="/" onClick={() => setIsOpen(false)}>
+            Home
+          </Link>
+          <Link href="/all-books" onClick={() => setIsOpen(false)}>
+            All Photos
+          </Link>
+          <Link href="/profile" onClick={() => setIsOpen(false)}>
+            Profile
+          </Link>
 
           {!user && (
             <>
-              <Link href="/signup" onClick={() => setIsOpen(false)}>SignUp</Link>
-              <Link href="/signin" onClick={() => setIsOpen(false)}>SignIn</Link>
+              <Link href="/signup" onClick={() => setIsOpen(false)}>
+                SignUp
+              </Link>
+              <Link href="/signin" onClick={() => setIsOpen(false)}>
+                SignIn
+              </Link>
             </>
           )}
 
@@ -107,20 +123,26 @@ const Navbar = () => {
             <>
               <div className="flex items-center gap-2 mt-2">
                 <Avatar>
-                 <Avatar.Image
-                  alt={user.name}
-                  src={user.image}
-                  // for google login to show the avatar
-                  referrerPolicy="no-referrer"
-                />
-                <Avatar.Fallback>{user.name[0]}</Avatar.Fallback>
-              </Avatar>
+                  <Avatar.Image
+                    alt={user.name}
+                    src={user.image}
+                    // for google login to show the avatar
+                    referrerPolicy="no-referrer"
+                  />
+                  <Avatar.Fallback>{user.name[0]}</Avatar.Fallback>
+                </Avatar>
                 <p>{user.name}</p>
               </div>
               <button
                 className="bg-[#88ABFD] cursor-pointer text-white px-2 py-1 rounded mt-2"
                 onClick={() => {
-                  authClient.signOut();
+                  authClient.signOut({
+                    fetchOptions: {
+                      onSuccess: () => {
+                        router.push("/login"); // redirect to login page
+                      },
+                    },
+                  });
                   setIsOpen(false);
                 }}
               >
@@ -131,7 +153,6 @@ const Navbar = () => {
         </div>
       </div>
     </div>
-  
   );
 };
 
