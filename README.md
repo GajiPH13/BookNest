@@ -16,9 +16,7 @@
 
 ---
 
-## 🖼️ Preview
 
-![BookNest Preview](https://via.placeholder.com/1200x600.png?text=BookNest+Preview)
 
 ---
 
@@ -92,8 +90,8 @@ This project uses **Better Auth** integrated with **MongoDB** to provide:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/online-book-shop.git
-cd online-book-shop
+git clone https://github.com/GajiPH13/BookNest
+cd BookNest
 ```
 
 ### 2. Install dependencies
@@ -169,8 +167,8 @@ Contributions are welcome!
 
 For questions or collaboration:
 
-* Email: [your-email@example.com](mailto:your-email@example.com)
-* GitHub: https://github.com/your-username
+* Email: [islamgajinajrul@gmail.com](mailto:islamgajinajrul@gmail.com)
+* GitHub: https://github.com/GajiPH13
 
 ---
 
