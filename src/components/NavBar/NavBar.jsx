@@ -60,7 +60,7 @@ const Navbar = () => {
               </Avatar>
               <p>{user.name}</p>
               <button
-                className="bg-red-500 text-white px-2 py-1 rounded text-sm"
+                className="bg-[#88ABFD] text-white px-2 py-1 rounded text-sm"
                 onClick={() => authClient.signOut()}
               >
                 SignOut

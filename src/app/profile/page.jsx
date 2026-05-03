@@ -32,7 +32,7 @@ const ProfilePage = () => {
     Profile Page
   </h1>
 
-  <Card className="flex flex-col items-center border mx-auto w-full max-w-md py-8 sm:py-10 mt-5 shadow-md">
+  <Card className="flex flex-col items-center border border-blue-300 mx-auto w-full max-w-md py-8 sm:py-10 mt-5 shadow-md">
     <Avatar className="h-16 w-16 sm:h-20 sm:w-20">
       <Avatar.Image
         alt={user?.name}

@@ -114,7 +114,7 @@ export default function SignUpPage() {
     </TextField>
 
     {/* Buttons */}
-    <div className="flex flex-col sm:flex-row gap-2">
+    <div className="flex flex-row sm:flex-col gap-2">
       <Button type="submit" className="w-full sm:w-auto">
         <Check />
         Submit
@@ -129,7 +129,7 @@ export default function SignUpPage() {
       </Button>
     </div>
   </Form>
-  <p>Already have an account?<span className="text-blue-500"> <Link href="/signin">Sign In</Link></span></p>
+  <p className="text-center">Already have an account?<span className="text-blue-500"> <Link href="/signin">Sign In</Link></span></p>
 <ToastContainer />
 </Card>
   );
