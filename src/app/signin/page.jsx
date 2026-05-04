@@ -113,7 +113,7 @@ export default function SignInPage() {
           </div>
         </Form>
 
-        <p className="text-center text-lg sm:text-xl my-4">or</p>
+        <p className="text-center text-lg sm:text-xl my-4">Or</p>
 
         <Button
           onClick={onGoogleSignIn}

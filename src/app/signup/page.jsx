@@ -13,6 +13,7 @@ import {
 } from "@heroui/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { GrGoogle } from "react-icons/gr";
 import { toast } from "react-toastify";
 import { ToastContainer } from "react-toastify/unstyled";
 
@@ -42,6 +43,12 @@ export default function SignUpPage() {
     if (error) {
       alert("Something went wrong!");
     }
+     
+  };
+  const onGoogleSignIn = async () => {
+    const data = await authClient.signIn.social({
+      provider: "google",
+    });
   };
 
   return (
@@ -130,6 +137,15 @@ export default function SignUpPage() {
           <Link href="/signin">Sign In</Link>
         </span>
       </p>
+      <p className="text-center text-lg font-bold">Or</p>
+      <Button
+          onClick={onGoogleSignIn}
+          variant="outline"
+          className="w-full border border-blue-300 flex items-center justify-center gap-2"
+        >
+          <GrGoogle />
+          Sign in with Google
+        </Button>
       <ToastContainer />
     </Card>
   );
