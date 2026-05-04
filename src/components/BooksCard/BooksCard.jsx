@@ -24,7 +24,7 @@ const BookCard = ({book}) => {
             <Chip className='absolute top-2 right-2'>{book?.category}</Chip>  
         </div>
         <div>
-            <h2>{book?.title}</h2>
+            <h2 className='font-semibold'>{book?.title}</h2>
         </div>
         <div className='flex justify-between items-center'>
             <div className='flex gap-2 items-center'>
@@ -40,7 +40,7 @@ const BookCard = ({book}) => {
         </div>
         <Link href={`/all-books/${book?.id}`}>
         <Button  variant="outline" className={'w-full border border-[#cddcfd]'}  >
-            View
+            View Details
             </Button>
             </Link>
         </Card>

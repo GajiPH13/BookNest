@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import router from "next/router";
+import { toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 const Navbar = () => {
   const userData = authClient.useSession();
   const user = userData.data?.user;
@@ -69,11 +71,9 @@ const Navbar = () => {
               <p>{user.name}</p>
               <button
                 className="bg-[#88ABFD] text-white px-2 py-1 rounded text-sm cursor-pointer"
-               onClick={async() => {
-                  await authClient.signOut({
-                    callbackUrl: "/signin",
-                  });
-                  setIsOpen(false);
+                onClick={async () => {
+                  await authClient.signOut();
+                  window.location.href = "/signin";
                 }}
               >
                 SignOut
@@ -148,11 +148,10 @@ const Navbar = () => {
               </div>
               <button
                 className="bg-[#88ABFD] cursor-pointer text-white px-2 py-1 rounded mt-2"
-                onClick={async() => {
-                  await authClient.signOut({
-                    callbackUrl: "/signin",
-                  });
-                  setIsOpen(false);
+                onClick={async () => {
+                  await authClient.signOut();
+                  window.location.href = "/signin";
+                  toast.success("Sign out successful!");
                 }}
               >
                 Logout
@@ -161,6 +160,7 @@ const Navbar = () => {
           )}
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

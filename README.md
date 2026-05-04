@@ -1,5 +1,5 @@
 # 📚 Online Book Shop – BookNest
-
+A modern, fully responsive online book shop built with Next.js App Router. This project focuses on performance, clean UI/UX, and secure authentication, providing users with a seamless browsing and purchasing experience.
 [![Live Site](https://img.shields.io/badge/Live%20Demo-Visit%20Now-green?style=for-the-badge)](https://book-nest-self.vercel.app)
 
 ![Next.js](https://img.shields.io/badge/Next.js-000?style=for-the-badge\&logo=nextdotjs)
@@ -16,9 +16,6 @@
 
 ---
 
-
-
----
 
 ## ✨ Key Highlights
 
