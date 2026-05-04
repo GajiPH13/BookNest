@@ -115,7 +115,7 @@ const Navbar = () => {
             Home
           </Link>
           <Link href="/all-books" onClick={() => setIsOpen(false)}>
-            All Photos
+            All Books
           </Link>
           <Link href="/profile" onClick={() => setIsOpen(false)}>
             Profile
