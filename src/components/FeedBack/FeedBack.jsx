@@ -47,7 +47,7 @@ export default function Testimonials() {
             key={user.id}
             initial={{ opacity: 0, y: index % 2 === 0 ? -40 : 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.8 }}
+            transition={{ delay: index * 0.5 }}
             viewport={{ once: true }}
             className="rounded-2xl p-5 shadow-lg flex flex-col items-center text-center"
             style={{ backgroundColor: "#EAF0FD" }}
